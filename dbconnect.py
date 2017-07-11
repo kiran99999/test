@@ -4,7 +4,7 @@ import numpy as np
 from pandas.io import sql
 db = MySQLdb.connect(host = "localhost",
 					 user = "root",
-					 passwd = "Msatyam13$")
+					 passwd = "*********")
 con = db.cursor()
 con.execute("USE python")
 data = pd.read_csv("/root/daily.csv",header = 0)
