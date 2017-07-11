@@ -1,0 +1,27 @@
+Started by user [8mha:////4HV5bkXJHVVXrs++rnWx0sWYiQ8oblooTgHnf4QknS1QAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwuoBn6pcWpRfrZmUWJeUWpKSmVlkYAhzjSTMcAAAA=[0mkira reddy
+Building in workspace /Users/kiranreddy/Desktop/Jenkins/jenkins/workspace/kiran
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Kiran0343/test.git # timeout=10
+Fetching upstream changes from https://github.com/Kiran0343/test.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/Kiran0343/test.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 72d3c2afa00e050915f19cc5fc1c1ee407c2ef50 (refs/remotes/origin/master)
+Commit message: "python program for grading"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 72d3c2afa00e050915f19cc5fc1c1ee407c2ef50
+ > git rev-list 72d3c2afa00e050915f19cc5fc1c1ee407c2ef50 # timeout=10
+[kiran] $ /bin/sh -xe /var/folders/25/9ksmtc_d7mbf31z508h4t00h0000gn/T/jenkins2512416637224909295.sh
++ cd /Users/kiranreddy/Desktop/Jenkins/script
++ python python.py
+Weighted marks for assigment1 is:
+Weighted marks for assigment2 is:
+Total Weighted marks for assigment2 is:
+Weighted marks for final exam is:
+Total Weighted marks for subject is:
+bonus marks:
+total marks with bonus :
+Goodbye
+Finished: SUCCESS

@@ -1,0 +1,7 @@
+Started by user [8mha:////4HV5bkXJHVVXrs++rnWx0sWYiQ8oblooTgHnf4QknS1QAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwuoBn6pcWpRfrZmUWJeUWpKSmVlkYAhzjSTMcAAAA=[0mkira reddy
+Building in workspace /Users/kiranreddy/Desktop/Jenkins/jenkins/workspace/kiran
+[kiran] $ /bin/sh -xe /var/folders/25/9ksmtc_d7mbf31z508h4t00h0000gn/T/jenkins5598789042653083708.sh
++ cd desktop/jenkins/script/
+/var/folders/25/9ksmtc_d7mbf31z508h4t00h0000gn/T/jenkins5598789042653083708.sh: line 2: cd: desktop/jenkins/script/: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

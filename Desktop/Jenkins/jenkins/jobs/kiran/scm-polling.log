@@ -1,0 +1,8 @@
+Started on Jul 11, 2017 10:35:20 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision d18a394d99697f4f0b62c94c408254de380dae85 (refs/remotes/origin/master)
+ > git ls-remote -h https://github.com/Kiran0343/jenkins.git # timeout=10
+Found 1 remote heads on https://github.com/Kiran0343/jenkins.git
+[poll] Latest remote head revision on refs/heads/master is: d18a394d99697f4f0b62c94c408254de380dae85 - already built by 23
+Done. Took 2.6 sec
+No changes

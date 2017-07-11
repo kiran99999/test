@@ -1,0 +1,7 @@
+Started on Jul 3, 2017 6:20:00 PM
+Using strategy: Default
+ > git ls-remote -h https://github.com/Kiran0343/jenkins.git # timeout=10
+Found 1 remote heads on https://github.com/Kiran0343/jenkins.git
+[poll] Latest remote head revision on refs/heads/master is: d18a394d99697f4f0b62c94c408254de380dae85
+Done. Took 0.34 sec
+Changes found
