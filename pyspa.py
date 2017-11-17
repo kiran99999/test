@@ -1,0 +1,21 @@
+from pyspark import SparkConf,SparkContext
+from pyspark.sql import Row,SQLContext
+conf = SparkConf().setAppName('sample csv')
+sc = SparkContext.getOrCreate(conf = conf)
+sqlctxt = SQLContext(sc)
+data = sc.textFile('file:///Users/kiranreddy/Downloads/scala.txt')
+data.take(2)
+data = data.map(lambda x: x.split("\n"))
+data = data.map(lambda x: [x[0],int(x[2])])
+print data.take(5)
+data = data.reduceByKey(lambda x,y:x+y)
+print data.take(5)
+data = data.toDF()
+df = data.selectExpr("_1 as name", "_2 as cost")
+print df.show()
+print df.filter(df.name == 'kiran').show()
+df.registerTempTable("df")
+print type(df)
+sqlctxt.sql("select * from df where cost > 150").show()
+data = df.toPandas()
+print data
