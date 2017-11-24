@@ -30,3 +30,8 @@ data = data.withColumn('Date',data.timedate[0].cast())
 data = data.withColumn('Time',data.timedate[1])
 data = data.drop('timedate','datetime')
 data.show()
+func =  udf (lambda x: datetime.strptime(x, '%Y%M%d'), DateType())
+
+df = df1.withColumn('new_col', date_format(func(col('old_col')), 'MM-dd-yyy'))
+
+df.show()
