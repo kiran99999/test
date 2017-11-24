@@ -19,3 +19,14 @@ print type(df)
 sqlctxt.sql("select * from df where cost > 150").show()
 data = df.toPandas()
 print data
+import pyspark.sql.functions as f
+from 
+data = sc.textFile("file:///Users/kiranreddy/Desktop/data.csv")
+data.collect()
+data = data.map(lambda x: x.split(",")).map(lambda x: (x[0],x[1],x[2])).toDF(['client_name','datetime','ss_time'])
+data = data.filter(data.client_name != 'client_name')
+data = data.withColumn('timedate',f.split(data.datetime," "))
+data = data.withColumn('Date',data.timedate[0].cast())
+data = data.withColumn('Time',data.timedate[1])
+data = data.drop('timedate','datetime')
+data.show()
