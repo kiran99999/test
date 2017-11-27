@@ -38,3 +38,61 @@ df.show()
 
 # hello
 
+
+schema = StructType([StructField("client_name", StringType(), True),
+                    StructField("time", TimestampType(), True),
+                    StructField("client_date", DateType(), True),
+                    StructField("client_time", TimestampType(), True),
+                    StructField("ss_date", DateType(), True),
+                    StructField("ss_time", TimestampType(), True),
+                    StructField("SS_value", DoubleType(), True),
+                    StructField("work_day", StringType(), True),
+                    StructField("weekday", IntegerType(), True),
+                    StructField("client_identifier", IntegerType(), True),
+                    StructField("datetime", DateType(), True),
+                    StructField("date_identifier", IntegerType(), True)
+                    ])
+data1 = sqlctxt.read.csv("/Users/kiranreddy/Desktop/data.csv",header=True,inferSchema=True)
+data1 = data1.drop('file_name','work_day',)
+data1.show()
+data1.printSchema()
+
+data1.printSchema()
+data1.columns
+
+
+
+data1 = data1.withColumn('timedate',f.split(data1.datetime," "))
+data1 = data1.withColumn('CDate',data1.timedate[0].cast(DateType()))
+data1 = data1.withColumn('Ctime',data1.timedate[1].cast(TimestampType()))
+data1 = data1.drop('timedate','datetime')
+
+data1.describe().show()
+
+data1.select(format_number('SS_value',2).alias('SS_VALUE')).show()
+
+data1 = data1.withColumn('ss_date',data1.ss_date.cast(DateType()))
+
+data1.printSchema()
+
+print data1.show()
+
+data1.write.csv("/Users/kiranreddy/Desktop/kiran.csv")
+
+data1 = sqlctxt.read.csv("/Users/kiranreddy/Desktop/data.csv",header=True,inferSchema=True)
+data1 = data1.drop('file_name','work_day',)
+data1.show()
+data1.printSchema()
+
+data1 = data1.withColumn('new_Time',data1.Time.cast(TimestampType()))\
+             .withColumn('ss_date',data1.ss_date.cast(TimestampType()))\
+             .withColumn('ss_time',data1.ss_time.cast(TimestampType()))\
+             .withColumn('Client_date',data1.Client_date.cast(DateType()))
+
+data1.select('new_Time').show()
+
+data1 = data1.withColumn('new_Time',from_unixtime(data1.Time,"est"))
+
+from pyspark.sql.functions import 
+
+
